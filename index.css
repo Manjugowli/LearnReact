@@ -1,3 +1,123 @@
-#root {
-    color: red;
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.navBar {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px ;
+    font-size: 20px;
+    gap: 40px;
+}
+
+.logo {
+    width: 140px;
+    height: 100px;
+}
+
+.body-container {
+    padding: 10px;
+}
+.resto-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 10px;
+}
+
+.search {
+    padding: 30px;
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    gap: 10px;
+}
+.resto-card:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+.resto-logo {
+    display: flex;
+    justify-content: center;    
+    max-height: 100px; 
+}
+
+.resto-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    background-color: #f0f0f0;
+    gap: 6px;
+    width: 220px;
+    height: 320px;
+    padding: 12px;
+    border-radius: 5px;
+    justify-content: space-evenly;
+}
+
+.card-details {
+    padding: 4px;
+}
+
+.detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: space-between;
+  margin: 4px 8px;
+}
+
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer-card{
+    margin: 20px;
+    padding: 20px;
+    width: 200px;
+    height: 400px;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.shimmer-logo{
+  height: 100px;
+  width: 150px;
+  background-color: #979393;
+  border-radius: 70px;
+}
+.shimmer-name{
+    height: 30px;
+    width: 200px;
+    background-color: #979393;
+}
+.shimmer-detail{
+    height: 30px;
+    width: 200px;
+    background-color: #979393;
+}
+
+.rest-menu-card{
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid #e3e0e0;
+    gap: 10px;
+    background-color: rgb(236, 233, 230);
+    margin: 10px;
+    padding: 10PX;
+    align-items: center;
+}
+.user-card{
+    border: 1px solid #e3e0e0;
+    gap: 10px;
+    background-color: rgb(236, 233, 230);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10PX;
 }
