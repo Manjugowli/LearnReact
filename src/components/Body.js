@@ -1,29 +1,13 @@
-import React, { useEffect, useState } from "react";
-import data from '../utils/data.json';
+import React, { useState } from "react";
+// import data from '../utils/data.json';  Stub data 
 import RestaurantsCard from "./RestaurantsCard";
 import Shimmer from "./Shimmer";
-import { RESTAURANT_API } from "../utils/constants";
 import { Link } from "react-router-dom";
+import useRestaurantList from "../utils/useRestaurantList";
 
 const Body = () =>{
-    const [ restList, setRestList ] = useState([])
+    const { restList, filtterList, setFiltterList }= useRestaurantList();
     const [ searchName , setSearchName ] = useState('')
-    const [ filtterList , setFiltterList ] = useState([])
-    useEffect(()=>{
-        fetchCards();
-    },[])
-    const fetchCards=async ()=>{
-        const data = await fetch(RESTAURANT_API);
-        const jsonData = await data.json();
-        // option chaning  If brakes verify with the api data and chaining
-        setRestList(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-        setFiltterList(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-    }
-//  Conditinal rendering 
-    // if(restList?.length === 0){
-    //     return <Shimmer />
-    // }
-    console.log("jjj", restList);
     
     return (
         <div className='body-container'>
